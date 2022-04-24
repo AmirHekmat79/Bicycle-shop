@@ -1,0 +1,67 @@
+
+@mixin textStyle($font,$Color){
+ font-size:$font;
+ color:$Color;
+
+}
+
+@mixin textShadow{
+    padding:60px;
+    box-shadow: 3px 3px 3px 3px darkviolet;  
+    font-weight:bold;
+    border:5px double palevioletred;
+}
+
+@mixin Design{
+
+    @content;
+}    
+
+@mixin ResponsiveDesign($width){
+    @if($width==M){
+       @media(max-width:565px){
+         
+        @content;
+          
+       }
+    }
+    @else if($width==L){
+
+        @media(min-width:565px)and(max-width:1200px){
+
+           @content;
+        }
+    }
+
+}
+
+@mixin ResponsiveDesign2($width){
+
+    @if($width==S){
+        @media(max-width:560px){
+    
+            @content;
+        }
+        
+    }
+     @else if($width==M){
+
+        @media(min-width:560px) and(max-width:992px){
+            
+        @content;
+      }
+
+ }
+ @else if($width==L){
+
+    @media(min-width:992px){
+
+        @content;
+    }
+ }
+
+}
+
+
+
+

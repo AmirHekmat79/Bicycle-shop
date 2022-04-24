@@ -1,0 +1,308 @@
+@import "_variables";
+@import "_mixins";
+
+header{
+
+    background-color:darkviolet;
+    padding-left:4px;
+
+.navbar{
+
+display:flex;
+
+.navbar-nav{
+
+    display:flex;
+    list-style-type:none;
+
+   .list-item{
+
+    margin:10px;
+   }
+
+}
+
+}
+
+}
+
+.list-link{
+    
+    @include textStyle(18px,$textColor); 
+    text-decoration:none;
+    &:hover{
+
+        color:orange;
+    }
+  
+}
+
+.image1{
+    margin-top:4px;
+    border-radius:5px;
+}
+
+.image2{
+
+ border-radius:5px;
+ margin-left:20px;
+ padding-right:10px;
+
+}
+
+.imageCard1{
+
+    width:100%; 
+    border-radius:5px;
+}
+
+.imageCard2{
+
+    width:100%;   
+   border-radius:5px;
+
+   
+}
+
+.imageCard3{
+
+    width:100%; 
+   border-radius:5px;
+}
+.imageCard4{
+
+    width:100%;
+    border-radius:5px;
+}
+
+.btn{
+    padding:10px;
+    margin-right:6px;
+    margin-bottom:5px;
+    color:$btn-color;
+    background-color:$btnBackgroundColor;
+    border-radius:5px;
+    text-align:center;
+}
+
+
+
+.banner{
+    margin-bottom:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:rgba(238, 130, 238, 0.37);
+
+    main{
+     
+        text-align:center;
+        @include textShadow;
+        @include textStyle(1rem,purple);
+        background-color:rgba(238, 130, 238, 0.37);
+        line-height:$lineHeight;
+        &:hover{
+
+            color:orangered;
+        }
+      
+    }
+   
+}
+
+
+h1{
+
+    margin-bottom:20px;
+}
+
+
+.products{
+    background-color:violet;
+    padding-top:30px;
+    padding-bottom:60px;
+    height:100vh;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:auto;
+    gap:12px;
+
+
+    .card1{
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        padding-top:5px;
+        padding-left:8px;
+        margin-right:6px;
+        padding-bottom:70px;
+        background-color:darkorchid;
+        border-radius:4px;
+    }
+
+    .card2{
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        padding-top:5px;
+        padding-right:4px;
+        padding-left:8px;
+        margin-right:6px;
+        padding-bottom:70px;
+        background-color:darkorchid;
+        border-radius:4px;
+    }
+
+    .card3{
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        padding-top:5px;
+        padding-right:4px;
+        padding-left:8px;
+        margin-right:6px;
+        padding-bottom:70px;
+        background-color:darkorchid;
+        border-radius:4px;
+
+    }
+    .card4{
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        padding-top:5px;
+        padding-left:8px;
+        padding-right:4px;
+        padding-bottom:70px;
+        margin-right:6px;
+        
+        background-color:darkorchid;
+        border-radius:4px;
+      
+    }
+
+}
+
+
+h2{
+
+    @include Design{
+     font-size:30px;
+     color:yellow;
+     text-transform:uppercase;
+     text-align:center;
+     background-color:mediumvioletred;
+     padding-top:40px;
+     padding-bottom:40px;
+
+    };
+}
+
+.paragraph{
+
+    color:#fff;
+}
+
+.banner{
+
+    @include ResponsiveDesign2(S){
+        
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+
+        main{
+
+            display:none;
+        }
+
+    }
+
+    @include ResponsiveDesign2(M){
+
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+    
+    }
+}
+
+
+.products{
+
+@include ResponsiveDesign(M){
+
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+    gap:40px;
+
+}
+
+@include ResponsiveDesign(L){
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+
+}
+
+
+}
+
+
+.Footer-Image{
+
+   height:90px;
+   width:90px;
+   border-radius:5px;
+}
+
+.Footer{
+padding-top:50px;
+padding-bottom:50px;
+background-color:darkviolet;
+display:flex;
+justify-content:center;
+
+.Footer-Link{
+margin-left:30px;
+list-style-type:none;
+.footer-link-item{
+
+    padding:5px;
+
+    .footer-link{
+
+        color:#fff;
+        text-decoration:none;
+        font-size:20px;
+        &:hover{
+
+            color:orange;
+        }
+    }
+    
+}
+
+}
+
+.footer-content{
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+}
+
+.footer-text{
+
+    font-size:25px;
+    color:rgb(128, 9, 0);
+}
+
+
